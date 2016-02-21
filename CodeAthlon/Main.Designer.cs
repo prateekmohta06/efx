@@ -345,9 +345,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1491, 187);
+            this.panel1.Size = new System.Drawing.Size(1491, 168);
             this.panel1.TabIndex = 31;
             // 
             // pictureBox2

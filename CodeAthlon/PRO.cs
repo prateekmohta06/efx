@@ -13,6 +13,7 @@ namespace CodeAthlon
 {
     public partial class PRO : Form
     {
+        // Parameterized Constructor. Data passed from Home screen
         public PRO(string proname, string category, int zipcode, string phone, double rating, int noofjobs, double rateusd, string skills, string lat, string lng)
         {
             InitializeComponent();
@@ -62,9 +63,10 @@ namespace CodeAthlon
             }
         }
 
+        // Global connection string. Kept as public variable because of the easy sharing and in case of change.
         public string connectionString = @"Data Source=C:\Users\atman\Desktop\homedepot.db; Version=3; FailIfMissing=True; Foreign Keys=True;";
 
-        
+        // Form Load Event. Resizes Skills Grid and Sets header on that grid.
         private void PRO_Load(object sender, EventArgs e)
         {
             skillGRID.Row = 0;
@@ -86,13 +88,14 @@ namespace CodeAthlon
         {
 
         }
-
+        // Add new Skills to the PRO's Skills list
         private void button3_Click(object sender, EventArgs e)
         {
             lstSkills.Items.Add(textBox1.Text );
             textBox1.Text = "";
         }
 
+        // Remove selected skill from Skills list
         private void button1_Click(object sender, EventArgs e)
         {
             lstSkills.Items.RemoveAt(lstSkills.SelectedIndex);
